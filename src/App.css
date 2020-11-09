@@ -44,6 +44,29 @@
     height: 71px;
 }
 
+
+.loaderContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: lightblue;
+}
+.loaderContainer h1{
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+    font-weight: bolder;
+}
+.loaderContainer h3{
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+}
+.loaders{
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 50px;
+}
 @media (max-width: 1300px){
     .container{
         flex-direction: column;

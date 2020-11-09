@@ -7,6 +7,7 @@ import CountrySearch from './components/country_search/CountrySearch';
 
 
 import {countries} from './API'
+import { Loader } from './components/Loader';
 
 function App() {
   const [c, setC] = useState([])
@@ -15,7 +16,8 @@ function App() {
       const d = await countries()
       setC(d)
     }
-    cList()
+    setTimeout(cList(), 3000)
+    
   }, [])
 
   if (c.length > 0) {
@@ -37,7 +39,7 @@ function App() {
     );
   }else{
     return (
-      <div>LOADING...</div>
+      <Loader />
     )
   }
 }
